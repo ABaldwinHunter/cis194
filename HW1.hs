@@ -20,22 +20,3 @@ doubleEvens n i
 
 doubleEveryOther :: [Int] -> [Int]
 doubleEveryOther n = mapWithIndex doubleEvens n
-
---doubleEveryOther :: [Integer] -> [Integer]
---doubleEveryOther n
---  | length(n) `mod` 2 == 0 = doubleOdds(n)
---  | otherwise = doubleEvens(n)
-
--- improved formatting
---doubleEvens :: [Integer] -> [Integer]
---doubleEvens [] = []
---doubleEvens [x] = []
---doubleEvens (x:(y:ys)) = [ double(x) ] ++ [ y ] ++ doubleEvens (ys)
-
---original formatting
---doubleOdds :: [Integer] -> [Integer]
---doubleOdds [] = []
---doubleOdds n = [head(n)] ++ [double(head(tail n))] ++ doubleOdds(tail (tail n))
-
---double :: Integer -> Integer
---double n = 2 * n
