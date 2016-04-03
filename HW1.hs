@@ -13,11 +13,11 @@ mapWithIndex x = go x 0
     go _ _ [] = []
     go f i (x:xs) = f x i : go f (i + 1) xs
 
-doubleEvens :: Int -> Int -> Int
-doubleEvens n i
-  | (i `mod` 2) == 0 = n
-  | otherwise = 2 * n
-
 doubleEveryOther :: [Int] -> [Int]
 doubleEveryOther n = mapWithIndex doubleEvens n
+  where
+    doubleEvens :: Int -> Int -> Int
+    doubleEvens n i
+      | (i `mod` 2) == 0 = n
+      | otherwise = 2 * n
 
