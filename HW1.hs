@@ -15,8 +15,9 @@ mapWithIndex x = go x 0
 
 doubleEvens :: Int -> Int -> Int
 doubleEvens n i
-  | (i `mod` 2) == 0 = 2 * n
-  | otherwise = n
+  | (i `mod` 2) == 0 = n
+  | otherwise = 2 * n
 
 doubleEveryOther :: [Int] -> [Int]
 doubleEveryOther n = mapWithIndex doubleEvens n
+
