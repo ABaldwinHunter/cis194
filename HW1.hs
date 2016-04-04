@@ -13,6 +13,11 @@ mapWithIndex x = go x 0
     go _ _ [] = []
     go f i (x:xs) = f x i : go f (i + 1) xs
 
+-- unused implementation of map. Just practicing.
+--myMap :: (a -> b) -> [a] -> [b]
+--myMap _ [] = []
+--myMap f (x:xs) = f x : myMap f xs
+
 doubleEveryOther :: [Int] -> [Int]
 doubleEveryOther n = mapWithIndex doubleEvens n
   where
