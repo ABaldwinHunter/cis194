@@ -26,3 +26,14 @@ doubleEveryOther n = mapWithIndex doubleEvens n
       | (i `mod` 2) == 0 = n
       | otherwise = 2 * n
 
+sumDigits :: [Integer] -> Integer
+sumDigits [] = 0
+sumDigits n = sumValues (allTheSingleLadies n)
+  where
+    allTheSingleLadies :: [Integer] -> [Integer]
+    allTheSingleLadies [] = []
+    allTheSingleLadies (x:xs) = (toDigits x) ++ (allTheSingleLadies xs)
+
+    sumValues :: [Integer] -> Integer
+    sumValues [] = 0
+    sumValues (x:xs) = x + sumValues xs
