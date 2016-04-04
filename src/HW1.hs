@@ -1,3 +1,5 @@
+module HW1 where
+
 toDigits :: Int -> [Int]
 toDigits n
   | n <= 0 = []
